@@ -1,15 +1,14 @@
 <?php
 
-//error_reporting(0); //status 0, no mostrar errores
-
-//ENDPOINT es punto de acceso a mi web service
-
-require 'DBManager.php'; //manejador de base de datos, que seria como mi "import"
+//error_reporting(0);
 
 
+require 'DBManager.php';
 
-$manager = new \DBManager(); //creamos clase dinamicamente
-$json = $manager->showFases(); //si no es nulo invocamos a find y mandamos id 
+
+
+$manager = new \DBManager(); 
+$json = $manager->showFases(); 
 
 
 
