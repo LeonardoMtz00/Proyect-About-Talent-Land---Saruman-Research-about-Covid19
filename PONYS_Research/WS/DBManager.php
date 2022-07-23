@@ -3,21 +3,20 @@
 class DBManager{
 
 
-	//variables globales, acceder a ellas con "this.", en vez de . es ->
+
 	private $db;
 	private $host;
 	private $user;
 	private $pass;
 
 
-	function __construct() { //variables para conexion de base de datos
+	function __construct() { 
 		$this->db = 'ictrp';
 		$this->host = 'localhost';
 		$this->user = 'root';
 		$this->pass = 'root';
 	}
 
-	//OPEN: intenta conectarse al host y regresa enlaze, conexion, pero si no funciona, el die (detiene ejecucion de programa y manda mensaje. Hasta donde encuentre un die se detiene.
 	private function open() {
 		//mandar todos los valores
 		$usr = mysqli_connect( 
@@ -78,7 +77,6 @@ class DBManager{
 
 		$this->close($usr); 
 
-		//******************* CAMBIO
 
 
 		return json_encode($resultados); //transformar stdClass a JSON
